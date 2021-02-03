@@ -7,13 +7,17 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 @EnableAutoConfiguration
-public class SampleController {
+public class MainController {
  
     @RequestMapping(value="/")
-    @ResponseBody
     public String sampleHome() {
         
-        return "welcome";
+        return "shopMain";
+    }
+    
+    @RequestMapping(value="/test.do")
+    public String bootstrapTest() {
+    	return "shop";
     }
 }
 
